@@ -28,3 +28,20 @@ bars.addEventListener('click', () => {
         nav.classList.add('hidden')
     }
 })
+
+// // talent visiblity
+// const talent = document.getElementById("talent");
+// const info = document.getElementById("info");
+
+// talent.addEventListener('mouseover', () => {
+//     if (info.classList.contains("hidden")) {
+//         info.classList.remove('hidden');
+//         info.classList.add('flex');
+//     }
+// })
+// talent.addEventListener('mouseout', () => {
+//     if (info.classList.contains("flex")) {
+//         info.classList.remove('flex');
+//         info.classList.add('hidden');
+//     }
+// })

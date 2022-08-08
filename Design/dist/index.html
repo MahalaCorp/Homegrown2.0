@@ -1,215 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
 
-        <link rel="stylesheet" href="css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>
-            body {
-                font-family: "Lato", sans-serif;
-            }
-        </style>
-        <title>Homegrown Talent</title>
-    </head>
+  <link rel="stylesheet" href="css/main.css" />
 
-    <body class="flex flex-col justify-center items-center w-full space-y-10">
-        <header class="flex items-center w-full shadow-md">
-            <nav
-                class="flex flex-col justify-between items-center lg:flex-row w-full py-2"
-            >
-                <!-- small to medium screens -->
-                <div class="flex justify-between lg:justify-center w-10/12">
-                    <div class="flex justify-center items-center">
-                        <a
-                            href=""
-                            class="flex justify-center items-center space-x-2"
-                        >
-                            <img src="img/logo.png" alt="" width="50" />
-                            <p
-                                class="hidden lg:block text-primary text-lg font-semibold"
-                            >
-                                Homegrown Talent
-                            </p></a
-                        >
-                    </div>
-                    <div
-                        id="bars"
-                        class="flex lg:hidden justify-end w-full py-3"
-                    >
-                        <div class="space-y-1">
-                            <div
-                                class="rounded-sm bg-green-600 h-1 w-4 ml-3"
-                            ></div>
-                            <div class="rounded-sm bg-green-600 h-1 w-7"></div>
-                            <div
-                                class="rounded-sm bg-green-600 h-1 w-4 ml-[1px]"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+  <title>Homegrown Talent</title>
+</head>
 
+<body class="flex flex-col justify-center items-center w-full space-y-10 mt-14 ">
+  <header class="flex top-0 fixed backdrop-filter backdrop-blur justify-center items-center w-full shadow-md">
+    <nav class="flex  flex-col justify-between items-center lg:flex-row w-full lg:w-11/12 py-2">
+      <!-- small to medium screens -->
+      <div class="flex justify-center lg:justify-start w-10/12">
+        <div class="flex justify-center items-center">
+          <a href="" class="flex justify-center items-center space-x-2">
+            <img src="img/logo.png" alt="" width="50" />
+            <p class="hidden lg:block text-primary text-xl font-semibold">
+              Homegrown Talent
+            </p>
+          </a>
+        </div>
+        <div id="bars" class="flex lg:hidden justify-end w-full py-3">
+          <div class="space-y-1">
+            <div class="rounded-sm bg-green-600 h-1 w-4 ml-3"></div>
+            <div class="rounded-sm bg-green-600 h-1 w-7"></div>
+            <div class="rounded-sm bg-green-600 h-1 w-4 ml-[1px]"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav"
+        class="hidden flex-col lg:flex lg:flex-row w-full justify-end items-center text-primary 0 align-middle lg:space-x-10 font-semibold mt-4 lg:mt-0 ">
+        <a href="" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+          Home
+        </a>
+        <a href="" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+          About Us
+        </a>
+        <a href="" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+          Join Us
+        </a>
+        <a href="" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+          Talent
+        </a>
+        <a href="" to="/Blog" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+          Blog
+        </a>
+        <a href="" class="py-3 text-center lg:p-0 w-full lg:w-auto lg:border-0">
+          Contact Us
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex flex-col justify-center items-center space-y-10 lg:w-11/12 w-10/12">
+
+    <!-- about section -->
+    <section class="grid lg:grid-cols-2 gap-3 w-full justify-between items-center lg:shadow-lg py-4">
+      <div class="flex flex-col items-center justify-start space-y-10 w-full">
+        <div class="flex flex-row justify-start gap-4 items-center">
+          <img src="img/logo.png" alt="HomegrownTH" class="h-28 md:h-40 lg:h-36 text-center" />
+          <div class="mt-4 space-y-4 w-full">
+            <p class="text-2xl lg:text-3xl">We Are</p>
+            <h1 class="text-4xl lg:text-5xl text-primary">Homegrown</h1>
+          </div>
+        </div>
+
+        <div class="flex justify-start items-center lg:w-8/12 w-full">
+          <p class="text-justify font-semibold">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+            necessitatibus nulla labore ullam, voluptate tempora ad in dolorum
+            ipsa perspiciatis unde hic pariatur eum sint velit laudantium eius
+            at corporis.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <img src="img/group421.png" alt="" width="500" height="500" />
+      </div>
+    </section>
+    <!-- End of About -->
+
+    <!-- Talent Section -->
+    <section class="flex flex-col justify-center items-center w-full">
+      <h1 class="text-4xl text-primary uppercase my-5">Talent</h1>
+      <div class="grid md:grid-cols-2 justify-items-center lg:grid-cols-3 gap-4 w-full mb-8">
+
+        <div class="w-full">
+          <a href="">
+            <div
+              class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex flex-col justify-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
+              style="background-image: url(img/talent1.jpg)">
+
+              <div class="flex flex-col py-8 transition ease-in-out delay-150">
+                <h1 class="text-white font-semibold text-2xl px-6">
+                  Model Name
+                </h1>
                 <div
-                    id="nav"
-                    class="hidden flex-col lg:flex lg:flex-row w-full justify-center items-center text-gray-600 align-middle lg:space-x-10 font-semibold mt-4 lg:mt-0"
-                >
-                    <a
-                        href=""
-                        class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href=""
-                        class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0"
-                    >
-                        About Us
-                    </a>
-                    <a
-                        href=""
-                        class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0"
-                    >
-                        Join Us
-                    </a>
-                    <a
-                        href=""
-                        class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0"
-                    >
-                        Talent
-                    </a>
-                    <a
-                        href=""
-                        to="/Blog"
-                        class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0"
-                    >
-                        Blog
-                    </a>
-                    <a
-                        href=""
-                        class="py-3 text-center lg:p-0 w-full lg:w-auto lg:border-0"
-                    >
-                        Contact Us
-                    </a>
+                  class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                  <p>
+                    <span class="text-primary">Height: </span>
+                    200cm
+                  </p>
+                  <p>
+                    <span class="text-primary">Shoe: </span>
+                    8
+                  </p>
+                  <p>
+                    <span class="text-primary">Waist: </span>
+                    32
+                  </p>
+                  <p>
+                    <span class="text-primary">Eye: </span>
+                    Brown
+                  </p>
                 </div>
-            </nav>
-        </header>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <main
-            class="flex flex-col justify-center items-center space-y-10 lg:w-11/12 w-10/12"
-        >
-            <!-- about section -->
-            <section
-                class="grid lg:grid-cols-2 gap-3 w-full justify-center items-center"
-            >
+        <div class="w-full">
+          <a href="">
+            <div
+              class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
+              style="background-image: url(img/person.jpg)">
+              <div class="flex flex-col py-8 transition ease-in-out delay-150">
+                <h1 class="text-white font-semibold text-2xl px-6">
+                  Model Name
+                </h1>
                 <div
-                    class="flex flex-col items-center justify-center space-y-10"
-                >
-                    <div
-                        class="flex flex-row justify-center gap-4 items-center"
-                    >
-                        <img
-                            src="img/logo.png"
-                            alt="HomegrownTH"
-                            class="h-36 text-center"
-                        />
-                        <div class="mt-4 space-y-4 w-full">
-                            <p class="text-2xl lg:text-3xl">We Are</p>
-                            <h1 class="text-4xl lg:text-5xl text-primary">
-                                Homegrown
-                            </h1>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex justify-center items-center lg:w-8/12 w-full"
-                    >
-                        <p class="text-justify font-semibold">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Quaerat necessitatibus nulla labore ullam,
-                            voluptate tempora ad in dolorum ipsa perspiciatis
-                            unde hic pariatur eum sint velit laudantium eius at
-                            corporis.
-                        </p>
-                    </div>
+                  class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                  <p>
+                    <span class="text-primary">Height: </span>
+                    200cm
+                  </p>
+                  <p>
+                    <span class="text-primary">Shoe: </span>
+                    8
+                  </p>
+                  <p>
+                    <span class="text-primary">Waist: </span>
+                    32
+                  </p>
+                  <p>
+                    <span class="text-primary">Eye: </span>
+                    Brown
+                  </p>
                 </div>
+              </div>
+            </div>
+          </a>
+        </div>
 
-                <div class="w-full">
-                    <img
-                        src="img/group421.png"
-                        alt=""
-                        width="500"
-                        height="500"
-                    />
+        <div class="w-full">
+          <a href="">
+            <div
+              class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:bg-none lg:hover:bg-gray-500 bg-blend-multiply"
+              style="background-image: url(img/talent9.jpg)">
+
+              <div class="flex flex-col justify-end py-8 h-full w-full">
+                <h1 class="text-white font-semibold text-2xl px-6">
+                  Model Name
+                </h1>
+                <div
+                  class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                  <p>
+                    <span class="text-primary">Height: </span>
+                    200cm
+                  </p>
+                  <p>
+                    <span class="text-primary">Shoe: </span>
+                    8
+                  </p>
+                  <p>
+                    <span class="text-primary">Waist: </span>
+                    32
+                  </p>
+                  <p>
+                    <span class="text-primary">Eye: </span>
+                    Brown
+                  </p>
                 </div>
-            </section>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end of talent -->
 
-            <section class="flex flex-col justify-center items-center w-full">
-                <h1 class="text-4xl text-primary uppercase my-5">Talent</h1>
-                <section
-                    class="grid md:grid-cols-2 justify-items-center lg:grid-cols-3 gap-4 w-full mb-10"
-                >
-                    <div class="w-full">
-                        <a href="">
-                            <div
-                                class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
-                                style="background-image: url(img/talent1.jpg)"
-                            >
-                                <h1
-                                    class="text-white font-semibold text-2xl px-6 py-8"
-                                >
-                                    Model Name
-                                </h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-full">
-                        <a href="">
-                            <div
-                                class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
-                                style="background-image: url(img/person.jpg)"
-                            >
-                                <h1
-                                    class="text-white font-semibold text-2xl px-6 py-8"
-                                >
-                                    Model Name
-                                </h1>
-                            </div>
-                        </a>
-                    </div>
+    <!-- Blog -->
+    <section class="flex flex-col justify-center items-center w-full mb-8">
 
-                    <div class="w-full">
-                        <a href="">
-                            <div
-                                class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:bg-none lg:hover:bg-gray-500 bg-blend-multiply"
-                                style="background-image: url(img/talent9.jpg)"
-                            >
-                                <h1
-                                    class="text-white font-semibold text-2xl px-6 py-8"
-                                >
-                                    Model Name
-                                </h1>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-            </section>
-        </main>
+      <h1 class="text-4xl text-primary uppercase mb-6">News & Blog</h1>
 
-        <script src="main.js"></script>
-    </body>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 gap-x-8 justify-items-center w-full">
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-gray-50 rounded-lg">
+          <img src="./img/item4.jpg" alt="" class="rounded-t-lg">
+          <div class="px-8 py-4">
+            <div class="flex mt-1 space-x-4">
+              <p><i class="fas fa-clock text-primary"></i> 5 min read</p>
+
+              <p><i class="fas fa-calendar-alt text-primary"></i> 07 January 2022</p>
+            </div>
+            <h1 class="text-primary font-bold mt-2 mb-3">Homegrown Podcast</h1>
+            <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio!</h2>
+            <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate rerum
+              aspernatur
+              sapiente quasi reprehenderit molestias deleniti non</p>
+            <div class="mt-4 mb-6 w-full flex justify-end">
+              <router-link to="/BlogPost" class="underline text-xl text-primary font-bold">Read more</router-link>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-gray-50 rounded-lg">
+          <img src="./img/item2.jpg" alt="" class="rounded-t-lg">
+          <div class="px-8 py-4">
+            <div class="flex mt-1 space-x-4">
+              <p><i class="fas fa-clock text-primary"></i> 5 min read</p>
+
+              <p><i class="fas fa-calendar-alt text-primary"></i> 07 January 2022</p>
+            </div>
+            <h1 class="text-primary font-bold mt-2 mb-3">Homegrown Podcast</h1>
+            <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio!</h2>
+            <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate rerum
+              aspernatur
+              sapiente quasi reprehenderit molestias deleniti non</p>
+            <div class="mt-4 mb-6 w-full flex justify-end">
+              <router-link to="/BlogPost" class="underline text-xl text-primary font-bold">Read more</router-link>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-gray-50 rounded-lg">
+          <img src="./img/item3.jpg" alt="" class="rounded-t-lg">
+          <div class="px-8 py-4">
+            <div class="flex mt-1 space-x-4">
+              <p><i class="fas fa-clock text-primary"></i> 5 min read</p>
+
+              <p><i class="fas fa-calendar-alt text-primary"></i> 07 January 2022</p>
+            </div>
+            <h1 class="text-primary font-bold mt-2 mb-3">Homegrown Podcast</h1>
+            <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio!</h2>
+            <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate rerum aspernatur
+              sapiente quasi reprehenderit molestias deleniti non</p>
+            <div class="mt-4 mb-6 w-full flex justify-end">
+              <router-link to="/BlogPost" class="underline text-xl text-primary font-bold">Read more</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="flex flex-col justify-center items-center mt-10 py-5">
+
+    <section class="flex flex-row text-primary justify-center items-end space-x-5 text-xl mb-4">
+      <a href="">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </section>
+
+    <p class="text-gray-500">&copy; copyright 2022 Powered by <a href="" class="font-semibold">Mahala</a></p>
+
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
 </html>
