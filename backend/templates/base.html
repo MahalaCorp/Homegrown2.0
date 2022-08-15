@@ -30,7 +30,7 @@
             <!-- small to medium screens -->
             <div class="flex justify-center lg:justify-start w-10/12">
                 <div class="flex justify-center items-center">
-                    <a href="" class="flex justify-center items-center space-x-2">
+                    <a href="{% url 'main:home' %}" class="flex justify-center items-center space-x-2">
                         <img src="{% static 'img/logo.png' %}" alt="" width="50" />
                         <p class="hidden lg:block text-primary text-xl font-semibold">
                             Homegrown Talent
@@ -48,29 +48,30 @@
 
             <div id="nav"
                 class="hidden flex-col lg:flex lg:flex-row w-full justify-end items-center text-primary 0 align-middle lg:space-x-10 font-semibold mt-4 lg:mt-0 ">
-                <a href="index.html" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:home' %}" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
                     Home
                 </a>
-                <a href="about.html" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:about' %}" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
                     About Us
                 </a>
-                <a href="join.html" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:join' %}" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
                     Join Us
                 </a>
-                <a href="talent.html" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:talent' %}" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
                     Talent
                 </a>
-                <a href="blog.html" to="/Blog" class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:blog' %}" to="/Blog"
+                    class="py-2 text-center lg:p-0 border-b w-full lg:w-auto lg:border-0">
                     Blog
                 </a>
-                <a href="contact.html" class="py-3 text-center lg:p-0 w-full lg:w-auto lg:border-0">
+                <a href="{% url 'main:contact' %}" class="py-3 text-center lg:p-0 w-full lg:w-auto lg:border-0">
                     Contact Us
                 </a>
             </div>
         </nav>
     </header>
 
-    <main class="flex flex-col justify-center items-center space-y-10 lg:w-11/12 w-10/12">
+    <main class="flex flex-col justify-center items-center space-y-10 lg:w-11/12 w-11/12">
 
         {% block content %}{% endblock %}
 
