@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- about section -->
+<section class="grid lg:grid-cols-2 gap-3 w-full justify-between items-center lg:shadow-lg py-4 bg-[#f2f2f2]">
+    <div class="flex flex-col items-center justify-start space-y-10 w-full">
+        <div class="flex flex-row justify-start gap-4 items-center">
+            <img src="{% static 'img/logo.png' %}" alt="HomegrownTH" class="h-28 md:h-40 lg:h-36 text-center" />
+            <div class="mt-4 space-y-4 w-full">
+                <p class="text-2xl lg:text-3xl">We Are</p>
+                <h1 class="text-4xl lg:text-5xl text-primary">Homegrown</h1>
+            </div>
+        </div>
+
+        <div class="flex justify-start items-center lg:w-8/12 w-full">
+            <p class="text-justify font-semibold">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+                necessitatibus nulla labore ullam, voluptate tempora ad in dolorum
+                ipsa perspiciatis unde hic pariatur eum sint velit laudantium eius
+                at corporis.
+            </p>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <img src="{% static 'img/group421.png' %}" alt="" width="500" height="500" />
+    </div>
+</section>
+<!-- End of About -->
+
+<!-- Talent Section -->
+<section class="flex flex-col justify-center items-center w-full">
+    <h1 class="text-4xl text-primary uppercase my-5">Talent</h1>
+    <div class="grid md:grid-cols-2 justify-items-center lg:grid-cols-3 gap-4 w-full mb-8">
+
+        <div class="w-full">
+            <a href="">
+                <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex flex-col justify-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
+                    style="background-image: url({% static 'img/talent1.jpg' %})">
+
+                    <div class="flex flex-col py-8 transition ease-in-out delay-150">
+                        <h1 class="text-white font-semibold text-2xl px-6">
+                            Model Name
+                        </h1>
+                        <div
+                            class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                            <p>
+                                <span class="text-primary">Height: </span>
+                                200cm
+                            </p>
+                            <p>
+                                <span class="text-primary">Shoe: </span>
+                                8
+                            </p>
+                            <p>
+                                <span class="text-primary">Waist: </span>
+                                32
+                            </p>
+                            <p>
+                                <span class="text-primary">Eye: </span>
+                                Brown
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-full">
+            <a href="">
+                <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
+                    style="background-image: url({% static 'img/person.jpg' %})">
+                    <div class="flex flex-col py-8 transition ease-in-out delay-150">
+                        <h1 class="text-white font-semibold text-2xl px-6">
+                            Model Name
+                        </h1>
+                        <div
+                            class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                            <p>
+                                <span class="text-primary">Height: </span>
+                                200cm
+                            </p>
+                            <p>
+                                <span class="text-primary">Shoe: </span>
+                                8
+                            </p>
+                            <p>
+                                <span class="text-primary">Waist: </span>
+                                32
+                            </p>
+                            <p>
+                                <span class="text-primary">Eye: </span>
+                                Brown
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-full">
+            <a href="">
+                <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:bg-none lg:hover:bg-gray-500 bg-blend-multiply"
+                    style="background-image: url({% static 'img/talent9.jpg' %})">
+
+                    <div class="flex flex-col justify-end py-8 h-full w-full">
+                        <h1 class="text-white font-semibold text-2xl px-6">
+                            Model Name
+                        </h1>
+                        <div
+                            class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+                            <p>
+                                <span class="text-primary">Height: </span>
+                                200cm
+                            </p>
+                            <p>
+                                <span class="text-primary">Shoe: </span>
+                                8
+                            </p>
+                            <p>
+                                <span class="text-primary">Waist: </span>
+                                32
+                            </p>
+                            <p>
+                                <span class="text-primary">Eye: </span>
+                                Brown
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- end of talent -->
+
+<!-- Blog -->
+<section class="flex flex-col justify-center items-center w-full mb-8">
+
+    <h1 class="text-4xl text-primary uppercase mb-6">News & Blog</h1>
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 gap-x-8 justify-items-center w-full">
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
+            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
+            <div class="px-8 py-4">
+                <div class="flex flex-col my-2">
+                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
+                    <div class="flex gap-6">
+                        <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
+                        <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
+                    </div>
+
+                </div>
+
+                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Optio!</h2>
+                <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
+                    rerum
+                    aspernatur
+                    sapiente quasi reprehenderit molestias deleniti non</p>
+                <div class="mt-4 mb-6 w-full flex items-center justify-between">
+                    <a href=""
+                        class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
+                        more
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
+            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
+            <div class="px-8 py-4">
+                <div class="flex flex-col my-2">
+                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
+                    <div class="flex gap-6">
+                        <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
+                        <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
+                    </div>
+
+                </div>
+
+                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Optio!</h2>
+                <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
+                    rerum
+                    aspernatur
+                    sapiente quasi reprehenderit molestias deleniti non</p>
+                <div class="mt-4 mb-6 w-full flex items-center justify-between">
+                    <a href=""
+                        class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
+                        more
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
+            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
+            <div class="px-8 py-4">
+                <div class="flex flex-col my-2">
+                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
+                    <div class="flex gap-6">
+                        <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
+                        <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
+                    </div>
+
+                </div>
+
+                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Optio!</h2>
+                <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
+                    rerum
+                    aspernatur
+                    sapiente quasi reprehenderit molestias deleniti non</p>
+                <div class="mt-4 mb-6 w-full flex items-center justify-between">
+                    <a href=""
+                        class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
+                        more
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="flex flex-col justify-center items-center w-full">
+
+    <h1 class="text-4xl text-primary mb-6">Our Podcast</h1>
+
+    <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/show/4SEm0vVz5pVtJgsJSJaS48?utm_source=generator&theme=0" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</section>
+
+{% endblock %}
