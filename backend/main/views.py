@@ -1,13 +1,20 @@
 from multiprocessing import context
+from statistics import mode
 from django.shortcuts import render
 
-from .models import Blog
+from .models import Blog, Talent, TalentImage
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'main/home.html')
+    model = Talent.objects.all()
+    blog = Blog.objects.all()
+    context = {
+        'blogs': blog,
+        'models': model
+    }
+    return render(request, 'main/home.html', context)
 
 
 def about(request):
@@ -31,7 +38,11 @@ def join(request):
 
 
 def talent(request):
-    return render(request, 'main/talent.html')
+    talents = Talent.objects.all()
+    context = {
+        'talents': talents
+    }
+    return render(request, 'main/talent.html', context)
 
 
 def blogPost(request, slug):
@@ -42,5 +53,12 @@ def blogPost(request, slug):
     return render(request, 'main/blogPost.html', context)
 
 
-def model(request):
-    return render(request, 'main/model.html')
+def model(request, slug):
+    model = Talent.objects.get(slug=slug)
+    image = TalentImage.objects.all()
+
+    context = {
+        'model': model,
+        'image': image
+    }
+    return render(request, 'main/model.html', context)
