@@ -11,5 +11,5 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('join', views.join, name="join"),
     path('talent', views.talent, name="talent"),
-
+    path('blogPost/<slug:slug>/', views.blogPost, name="blogPost"),
 ]

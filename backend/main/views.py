@@ -1,4 +1,7 @@
+from multiprocessing import context
 from django.shortcuts import render
+
+from .models import Blog
 
 # Create your views here.
 
@@ -12,7 +15,11 @@ def about(request):
 
 
 def blog(request):
-    return render(request, 'main/blog.html')
+    blog = Blog.objects.all
+    context = {
+        'blog': blog,
+    }
+    return render(request, 'main/blog.html', context)
 
 
 def contact(request):
@@ -27,8 +34,12 @@ def talent(request):
     return render(request, 'main/talent.html')
 
 
-def blogPost(request):
-    return render(request, 'main/blogPost.html')
+def blogPost(request, slug):
+    blog = Blog.objects.get(title=slug)
+    context = {
+        'blog': blog
+    }
+    return render(request, 'main/blogPost.html', context)
 
 
 def model(request):
