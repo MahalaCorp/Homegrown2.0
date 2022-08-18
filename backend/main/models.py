@@ -22,3 +22,27 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Talent(models.Model):
+    name = models.CharField(max_length=255)
+    slug = models.SlugField(default='slug')
+    coverImage = models.ImageField(upload_to='talent')
+    height = models.IntegerField()
+    waist = models.IntegerField()
+    bust = models.IntegerField()
+    shoe = models.IntegerField()
+    dress = models.IntegerField()
+    eye = models.CharField(max_length=255)
+    hair = models.CharField(max_length=255)
+
+    create_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+
+class TalentImage(models.Model):
+    talent = models.ForeignKey(Talent, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="talent/img")

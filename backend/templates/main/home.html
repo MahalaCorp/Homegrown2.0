@@ -35,32 +35,45 @@
     <h1 class="text-4xl text-primary uppercase my-5">Talent</h1>
     <div class="grid md:grid-cols-2 justify-items-center lg:grid-cols-3 gap-4 w-full mb-8">
 
+        {% for model in models %}
         <div class="w-full">
-            <a href="">
+            <a href="{% url 'main:model' model.slug %}">
                 <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex flex-col justify-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
-                    style="background-image: url({% static 'img/talent1.jpg' %})">
+                    style="background-image: url({{ model.coverImage.url }})">
 
                     <div class="flex flex-col py-8 transition ease-in-out delay-150">
                         <h1 class="text-white font-semibold text-2xl px-6">
-                            Model Name
+                            {{ model.name }}
                         </h1>
                         <div
                             class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
                             <p>
                                 <span class="text-primary">Height: </span>
-                                200cm
-                            </p>
-                            <p>
-                                <span class="text-primary">Shoe: </span>
-                                8
+                                {{ model.height}}cm
                             </p>
                             <p>
                                 <span class="text-primary">Waist: </span>
-                                32
+                                {{ model.waist}}
+                            </p>
+                            <p>
+                                <span class="text-primary">Bust: </span>
+                                {{ model.bust }}
+                            </p>
+                            <p>
+                                <span class="text-primary">Shoe: </span>
+                                {{ model.shoe }}
+                            </p>
+                            <p>
+                                <span class="text-primary">Dress: </span>
+                                {{ model.dress}}
                             </p>
                             <p>
                                 <span class="text-primary">Eye: </span>
-                                Brown
+                                {{ model.eye }}
+                            </p>
+                            <p>
+                                <span class="text-primary">Hair: </span>
+                                {{ model.hair }}
                             </p>
                         </div>
                     </div>
@@ -68,70 +81,8 @@
             </a>
         </div>
 
-        <div class="w-full">
-            <a href="">
-                <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
-                    style="background-image: url({% static 'img/person.jpg' %})">
-                    <div class="flex flex-col py-8 transition ease-in-out delay-150">
-                        <h1 class="text-white font-semibold text-2xl px-6">
-                            Model Name
-                        </h1>
-                        <div
-                            class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
-                            <p>
-                                <span class="text-primary">Height: </span>
-                                200cm
-                            </p>
-                            <p>
-                                <span class="text-primary">Shoe: </span>
-                                8
-                            </p>
-                            <p>
-                                <span class="text-primary">Waist: </span>
-                                32
-                            </p>
-                            <p>
-                                <span class="text-primary">Eye: </span>
-                                Brown
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
 
-        <div class="w-full">
-            <a href="">
-                <div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex items-end hover:transition bg-gray-500 lg:bg-none lg:hover:bg-gray-500 bg-blend-multiply"
-                    style="background-image: url({% static 'img/talent9.jpg' %})">
-
-                    <div class="flex flex-col justify-end py-8 h-full w-full">
-                        <h1 class="text-white font-semibold text-2xl px-6">
-                            Model Name
-                        </h1>
-                        <div
-                            class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
-                            <p>
-                                <span class="text-primary">Height: </span>
-                                200cm
-                            </p>
-                            <p>
-                                <span class="text-primary">Shoe: </span>
-                                8
-                            </p>
-                            <p>
-                                <span class="text-primary">Waist: </span>
-                                32
-                            </p>
-                            <p>
-                                <span class="text-primary">Eye: </span>
-                                Brown
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 </section>
 <!-- end of talent -->
@@ -144,11 +95,12 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 gap-x-8 justify-items-center w-full">
 
+        {% for blog in blogs %}
         <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
-            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
+            <img src="{{ blog.coverImage.url }}" alt="" class="rounded-t-lg">
             <div class="px-8 py-4">
                 <div class="flex flex-col my-2">
-                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
+                    <h1 class="text-2xl text-primary font-bold ">{{ blog.title }}</h1>
                     <div class="flex gap-6">
                         <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
                         <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
@@ -156,14 +108,13 @@
 
                 </div>
 
-                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio!</h2>
+                <h2 class="font-bold leading-6 py-2">{{ blog.description }}</h2>
                 <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
                     rerum
                     aspernatur
                     sapiente quasi reprehenderit molestias deleniti non</p>
                 <div class="mt-4 mb-6 w-full flex items-center justify-between">
-                    <a href=""
+                    <a href="{% url 'main:blogPost' blog.title %}"
                         class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
                         more
                     </a>
@@ -171,62 +122,8 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
 
-        <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
-            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
-            <div class="px-8 py-4">
-                <div class="flex flex-col my-2">
-                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
-                    <div class="flex gap-6">
-                        <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
-                        <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
-                    </div>
-
-                </div>
-
-                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio!</h2>
-                <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
-                    rerum
-                    aspernatur
-                    sapiente quasi reprehenderit molestias deleniti non</p>
-                <div class="mt-4 mb-6 w-full flex items-center justify-between">
-                    <a href=""
-                        class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
-                        more
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="flex flex-col justify-center items-center shadow-xl bg-[#f2f2f2] rounded-lg">
-            <img src="{% static 'img/item2.jpg' %}" alt="" class="rounded-t-lg">
-            <div class="px-8 py-4">
-                <div class="flex flex-col my-2">
-                    <h1 class="text-2xl text-primary font-bold ">Homegrown Podcast</h1>
-                    <div class="flex gap-6">
-                        <p class="text-[#666]"><i class="fas fa-clock"></i> 5 min read</p>
-                        <p class="text-[#666]"><i class="fas fa-calendar-alt "></i> 07 January 2022</p>
-                    </div>
-
-                </div>
-
-                <h2 class="font-bold leading-6 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Optio!</h2>
-                <p class="leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cupiditate
-                    rerum
-                    aspernatur
-                    sapiente quasi reprehenderit molestias deleniti non</p>
-                <div class="mt-4 mb-6 w-full flex items-center justify-between">
-                    <a href=""
-                        class="border-2 border-[#09b11f] py-2 px-6 transition delay-100 ease-in-out duration-100 hover:-translate-y-1 hover:border-[#333]">Read
-                        more
-                    </a>
-
-                </div>
-            </div>
-        </div>
     </div>
 
 </section>

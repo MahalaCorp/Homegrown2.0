@@ -12,4 +12,5 @@ urlpatterns = [
     path('join', views.join, name="join"),
     path('talent', views.talent, name="talent"),
     path('blogPost/<slug:slug>/', views.blogPost, name="blogPost"),
+    path('model/<slug:slug>/', views.model, name="model"),
 ]
