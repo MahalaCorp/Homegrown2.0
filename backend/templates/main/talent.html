@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Talent Section -->
+<section class="flex flex-col justify-center items-center w-full">
+	<h1 class="text-4xl text-primary uppercase my-5">Talent</h1>
+	<div class="grid md:grid-cols-2 justify-items-center lg:grid-cols-3 gap-4 w-full mb-8">
+
+		{% for talent in talents %}
+		<div class="w-full">
+			<a href="{% url 'main:model' talent.slug %}">
+				<div class="h-model sm:h-model md:h-model lg:h-model bg-no-repeat bg-cover bg-center flex flex-col justify-end hover:transition bg-gray-500 lg:hover:bg-gray-500 bg-blend-multiply"
+					style="background-image: url({{ talent.coverImage.url }})">
+
+					<div class="flex flex-col py-8 transition ease-in-out delay-150">
+						<h1 class="text-white font-semibold text-2xl px-6">
+							{{ talent.name }}
+						</h1>
+						<div
+							class="flex flex-col px-6 pt-4 text-white font-semibold transition ease-in-out delay-150 tracking-wider">
+							<p>
+								<span class="text-primary">Height: </span>
+								{{ talent.height}}cm
+							</p>
+							<p>
+								<span class="text-primary">Waist: </span>
+								{{ talent.waist}}
+							</p>
+							<p>
+								<span class="text-primary">Bust: </span>
+								{{ talent.bust }}
+							</p>
+							<p>
+								<span class="text-primary">Shoe: </span>
+								{{ talent.shoe }}
+							</p>
+							<p>
+								<span class="text-primary">Dress: </span>
+								{{ talent.dress}}
+							</p>
+							<p>
+								<span class="text-primary">Eye: </span>
+								{{ talent.eye }}
+							</p>
+							<p>
+								<span class="text-primary">Hair: </span>
+								{{ talent.hair }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+
+	</div>
+</section>
+
+{% endblock %}
