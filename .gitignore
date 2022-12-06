@@ -2,6 +2,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
 ### Django ###
+node_modules
+node_modules/*
+
 *.log
 *.pot
 *.pyc
@@ -173,5 +176,4 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
 
-node_modules
-node_modules/*
+
