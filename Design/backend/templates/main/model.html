@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="flex flex-col items-center h-full">
+    <div class="flex flex-col lg:flex-row w-full justify-center items-center">
+        <h1 class="text-4xl lg:text-6xl text-[#333] tracking-wider">{{ model.name }}</h1>
+        <div class=" mt-4 lg:mt-0 lg:absolute flex text-[#555] lg:w-full justify-end items-center lg:px-20 space-x-4">
+            <p class="text-2xl tracking-wide">Portifolio</p>
+            <a class="text-2xl"><i class="fas fa-print"></i></a>
+            <a class="text-2xl"><i class="fas fa-download"></i></a>
+        </div>
+    </div>
+    <div class="flex justify-center flex-wrap gap-4 lg:space-x-8 mt-4">
+        <p>
+            <span class="font-semibold text-primary">Height: </span>
+            <span clas>{{ model.height }} cm</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Waist: </span>
+            <span>{{ model.waist }}"</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Bust: </span>
+            <span> {{model.bust }}"b</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Shoe: </span>
+            <span>{{ model.shoe }}"</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Dress: </span>
+            <span>{{ model.dress }}</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Eyes: </span>
+            <span>{{ model.eye }}</span>
+        </p>
+        <p>
+            <span class="font-semibold text-primary">Hair: </span>
+            <span>{{ model.eye }}</span>
+        </p>
+    </div>
+</section>
+
+<section class="grid md:grid-cols-3 gap-2 w-full">
+    {% for image in image %}
+
+    <div>
+        <img src="{{ image.image.url }}" alt="">
+    </div>
+
+    {% endfor %}
+</section>
+{% endblock %}
